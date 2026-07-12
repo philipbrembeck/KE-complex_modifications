@@ -6,7 +6,7 @@ function main() {
       {
         title: 'Korean Won (₩) to Backtick (`) with shortcut preserved',
         maintainers: [
-          "sts07142"
+          "injaeryou"
         ],
         rules: [
           {
