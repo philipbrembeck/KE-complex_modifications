@@ -1,0 +1,50 @@
+<h3>Hardware requirement</h3>
+
+<p>
+  These rules only fire while a 3-pedal USB foot switch is connected.
+  The device is matched by <code>device_if</code> with
+  <code>vendor_id: 6790</code> (0x1a86, QinHeng Electronics / WCH) and
+  <code>product_id: 57382</code> (0xe026).
+  This is the controller used by the common low-cost triple foot switch sold under many brands
+  (PCsensor, KKmoon and similar OEM variants).
+</p>
+
+<p>
+  Check your own device in <b>Karabiner-EventViewer &rarr; Devices</b>.
+  If your vendor / product id differs, edit the <code>device_if</code> conditions in the JSON
+  before importing.
+</p>
+
+<h3>Factory key assignment</h3>
+
+<p>
+  The pedals are expected to send plain <code>a</code>, <code>b</code>, <code>c</code>
+  (left / middle / right), which is the factory default of these switches.
+  If the pedals were re-programmed with the vendor's Windows configuration tool,
+  change the <code>from.key_code</code> values accordingly.
+</p>
+
+<h3>Why the modifier layers</h3>
+
+<p>
+  A foot switch has only three buttons, but a foot press can be combined with modifiers held on the
+  keyboard. Each pedal therefore exposes six slots
+  (no modifier, control, option, shift, command, hyper = control+option+shift+command),
+  giving 18 actions in total.
+  Enable only the pedal layers you need; each pedal is a separate rule.
+</p>
+
+<table>
+  <tr><th>Modifier</th><th>Pedal 1 (editing)</th><th>Pedal 2 (navigation)</th><th>Pedal 3 (media)</th></tr>
+  <tr><td>(none)</td><td>copy</td><td>page down</td><td>play / pause</td></tr>
+  <tr><td>control</td><td>cut</td><td>page up</td><td>rewind</td></tr>
+  <tr><td>option</td><td>paste</td><td>end</td><td>fast-forward</td></tr>
+  <tr><td>shift</td><td>paste without formatting</td><td>home</td><td>mute</td></tr>
+  <tr><td>command</td><td>undo</td><td>Mission Control</td><td>volume down</td></tr>
+  <tr><td>hyper</td><td>redo</td><td>Launchpad</td><td>volume up</td></tr>
+</table>
+
+<p>
+  Because every manipulator is scoped by <code>device_if</code>, the normal
+  <code>a</code> / <code>b</code> / <code>c</code> keys of your keyboard are never affected.
+</p>

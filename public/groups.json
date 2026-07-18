@@ -1791,6 +1791,10 @@
         {
           "path": "json/glove_80_lower_level_mouse_bindings.json",
           "extra_description_path": "extra_descriptions/glove_80_lower_level_mouse_bindings.html"
+        },
+        {
+          "path": "json/nowage_foot_pedal.json",
+          "extra_description_path": "extra_descriptions/nowage_foot_pedal.html"
         }
       ]
     },
