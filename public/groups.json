@@ -1962,6 +1962,9 @@
           "path": "json/disable_mail_safari.json"
         },
         {
+          "path": "json/hold_to_toggle_caps_lock.json"
+        },        
+        {
           "path": "json/block_one_handed_combos.json"
         },
         {
